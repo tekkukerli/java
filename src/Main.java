@@ -5,10 +5,10 @@ public class Main {
         Scanner reader = new Scanner(System.in);
         System.out.println("Type a number ");
         int number = Integer.parseInt(reader.nextLine());
-        if(number % 2 == 0) {
-            System.out.println("Number " + number + " is even.");
+        if(number >= 0) {
+            System.out.println("Number " + number + " is positive.");
         } else {
-            System.out.println("Number " + number + " is odd.");
+            System.out.println("Number " + number + " is negative.");
         }
     }
 }
