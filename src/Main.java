@@ -2,17 +2,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Type a year: ");
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Type the password: ");
 
-        int year = Integer.parseInt(input.nextLine());
-        if (year % 100 == 0 && year % 400 == 0) {
-            System.out.println("The year is a leap year.");
-        } else if (year % 4 == 0 ){
-            System.out.println("The year is a leap year.");
-        } else {
-            System.out.println("The year is not a leap year.");
+        String password = reader.nextLine();
+        while (!password.equals("carrot")) {
+                System.out.println("Wrong!");
+                System.out.println("Type the password: ");
+                password = reader.nextLine();
         }
+        System.out.println("Right!");
+        System.out.println();
+        System.out.println("The secret is: jryy qbar!");
     }
 }
 
