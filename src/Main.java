@@ -2,14 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("How old are you? ");
+        Scanner input = new Scanner(System.in);
+        System.out.println("Type a year: ");
 
-        int number = Integer.parseInt(reader.nextLine());
-        if (number >= 0 && number < 121) {
-            System.out.println("OK");
+        int year = Integer.parseInt(input.nextLine());
+        if (year % 100 == 0 && year % 400 == 0) {
+            System.out.println("The year is a leap year.");
+        } else if (year % 4 == 0 ){
+            System.out.println("The year is a leap year.");
         } else {
-            System.out.println("Impossible!");
+            System.out.println("The year is not a leap year.");
         }
     }
 }
