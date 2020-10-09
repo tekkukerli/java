@@ -1,21 +1,23 @@
 import java.util.Scanner; //to read user input
 
 public class Main {
-    public static void main(String[] args) {
-        printStars(5);
-        printStars(3);
-        printStars(9);
-    }
-    private static void printStars(int amount) {
-        // you can print one star with the command
-        // System.out.print("*");
-        // call this command amount times
-        int i = 1;
-        while (i <= amount) {
-            System.out.print("*");
-            i++;
+    public static int least(int number1, int number2) {
+        // write program code here
+        // do not print anything inside the method
+        int least;
+        if (number1 < number2) {
+            least = number1;
+        } else if (number2 < number1) {
+            least = number2;
+        } else {
+            least = number1;
         }
-        System.out.println();
+        // method needs a return in the end
+        return least;
+    }
+    public static void main(String[] args) {
+        int answer = least(2, 7);
+        System.out.println("Least: " + answer);
     }
 }
 
