@@ -1,17 +1,17 @@
 //import java.util.Scanner; //to read user input
 import java.util.ArrayList;
 
-
 public class Main {
 
-    public static double average(ArrayList<Integer> list) {
+    public static int greatest(ArrayList<Integer> list) {
         // write your code here
-        int sum = 0;
-        for (Integer number : list
-        ) {
-            sum += number;
+        int greatestNumber = list.get(0);
+        for (Integer number : list) {
+            if (number > greatestNumber) {
+                greatestNumber = number;
+            }
         }
-        return (double) sum / list.size();
+        return greatestNumber;
     }
 
     public static void main(String[] args) {
@@ -21,8 +21,7 @@ public class Main {
         list.add(7);
         list.add(2);
 
-        System.out.println("The average is: " + average(list));
+        System.out.println("The greatest number is: " + greatest(list));
     }
-
 }
 
