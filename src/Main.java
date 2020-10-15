@@ -1,5 +1,6 @@
 import java.util.Scanner; //to read user input
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 
@@ -11,14 +12,19 @@ public class Main {
             System.out.println("Type a word: ");
             String word = reader.nextLine();
 
-            if (words.contains(word)) {
-                System.out.println("You gave the word " + word + " twice");
+            if(word.isEmpty()) {
                 break;
             } else {
                 words.add(word);
             }
         }
+        Collections.sort(words);
 
+        System.out.println("You typed in following words: ");
+        for (String word : words
+        ) {
+            System.out.println(word);
+        }
     }
 
 }
