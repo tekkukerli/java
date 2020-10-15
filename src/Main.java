@@ -1,27 +1,37 @@
-//import java.util.Scanner; //to read user input
+import java.util.Scanner; //to read user input
 import java.util.ArrayList;
 
 public class Main {
 
-    public static int greatest(ArrayList<Integer> list) {
-        // write your code here
-        int greatestNumber = list.get(0);
-        for (Integer number : list) {
-            if (number > greatestNumber) {
-                greatestNumber = number;
-            }
+    public static String reverse(String text) {
+        int i = text.length() -1;
+        String reverseText = "";
+        while (i >= 0) {
+            reverseText += text.charAt(i);
+            i--;
         }
-        return greatestNumber;
+        return reverseText;
+    }
+
+    public static boolean palindrome(String text) {
+        // write your code here
+        if (text.equals((reverse(text)))) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        list.add(3);
-        list.add(2);
-        list.add(7);
-        list.add(2);
+        Scanner reader = new Scanner(System.in);
 
-        System.out.println("The greatest number is: " + greatest(list));
+        System.out.println("Type a text: ");
+        String text = reader.nextLine();
+        if (palindrome(text)) {
+            System.out.println("The text is a palindrome!");
+        } else {
+            System.out.println("The text is not a palindrome!");
+        }
     }
 }
 
