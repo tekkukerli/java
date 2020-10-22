@@ -22,6 +22,10 @@ public class Menu {
         }
     }
 
+    public void clearMenu() {
+        this.meals.clear();
+    }
+
 
 
 }

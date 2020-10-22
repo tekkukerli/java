@@ -10,6 +10,9 @@ public class Main {
                 menu.addMeal("Sauerkraut");
 
                 menu.printMeals();
+
+                menu.clearMenu();
+                menu.printMeals();
         }
 
 
