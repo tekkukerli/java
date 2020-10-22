@@ -11,8 +11,16 @@ public class DecreasingCounter {
 
     public void decrease() {
         // write here the code that decrements the value of counter by one
-        this.value--;
+
+        if (this.value > 0) {
+            this.value--;
+        }
     }
 
     // and here the rest of the methods
+
+
+
+
+
 }
