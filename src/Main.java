@@ -3,35 +3,28 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static String reverse(String text) {
-        int i = text.length() -1;
-        String reverseText = "";
-        while (i >= 0) {
-            reverseText += text.charAt(i);
-            i--;
-        }
-        return reverseText;
-    }
-
-    public static boolean palindrome(String text) {
-        // write your code here
-        if (text.equals((reverse(text)))) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        ArrayList<Integer> list2 = new ArrayList<Integer>();
 
-        System.out.println("Type a text: ");
-        String text = reader.nextLine();
-        if (palindrome(text)) {
-            System.out.println("The text is a palindrome!");
-        } else {
-            System.out.println("The text is not a palindrome!");
-        }
+        list1.add(4);
+        list1.add(3);
+
+        list2.add(5);
+        list2.add(10);
+        list2.add(7);
+
+        combine(list1, list2);
+
+        System.out.println(list1); // prints [4, 3, 5, 10, 7]
+        System.out.println(list2); // prints [5, 10, 7]
+
     }
+
+        public static void combine(ArrayList<Integer> first, ArrayList<Integer> second) {
+            first.addAll(second);
+
+    }
+
 }
 
