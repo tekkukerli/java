@@ -30,4 +30,8 @@ public class BoundedCounter {
         // write here code that returns the value
         return this.value;
     }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
 }
