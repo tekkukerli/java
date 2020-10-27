@@ -8,6 +8,8 @@ public class Main {
         stats.addNumber(1);
         stats.addNumber(2);
         System.out.println("Amount: " + stats.amountOfNumbers());
+        System.out.println("sum: " + stats.sum());
+        System.out.println("average: " + stats.average());
     }
 
 
