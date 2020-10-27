@@ -2,17 +2,25 @@ import java.util.Scanner; //to read user input
 
 public class Main {
     public static void main(String[] args) {
-        NumberStatistics stats = new NumberStatistics();
-        stats.addNumber(3);
-        stats.addNumber(5);
-        stats.addNumber(1);
-        stats.addNumber(2);
-        System.out.println("Amount: " + stats.amountOfNumbers());
-        System.out.println("sum: " + stats.sum());
-        System.out.println("average: " + stats.average());
+        NumberStatistics sum = new NumberStatistics();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Insert numbers: ");
+
+
+
+        while (true) {
+            int number = scanner.nextInt();
+
+            if(number == -1) {
+                break;
+            } else {
+                sum.addNumber(number);
+            }
+
+        }
+        System.out.println("Sum: " + sum.sum());
     }
-
-
 
 }
 
