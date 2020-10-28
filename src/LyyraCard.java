@@ -21,8 +21,9 @@ public class LyyraCard {
         } else {
             return false;
         }
-
         // if not, the method returns false meaning that the card could not be used for the payment
         // if the balance is enough, the given amount is taken from the balance and true is returned
     }
+
+
 }
