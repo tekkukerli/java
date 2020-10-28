@@ -33,10 +33,40 @@ public class CashRegister {
         // if not enough money is given, all is returned and nothing else happens
         if(cashGiven >= 4.00) {
             this.cashInRegister += 4.00;
-            this.economicalSold++;
+            this.gourmetSold++;
             return cashGiven - 4.00;
         } else {
             return cashGiven;
+        }
+    }
+
+    public boolean payEconomical(LyyraCard card) {
+        // the price of the economical lunch is 2.50 euros
+        // if the balance of the card is at least the price of the lunch:
+        //    the amount of sold lunches is incremented by one
+        //    the method returns true
+        // if not, the method returns false
+        if(card.balance() >= 2.50) {
+            this.economicalSold++;
+            card.pay(2.50);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean payGourmet(LyyraCard card) {
+        // the price of the gourmet lunch is 4.00 euros
+        // if the balance of the card is at least the price of the lunch:
+        //    the amount of sold lunches is incremented by one
+        //    the method returns true
+        // if not, the method returns false
+        if(card.balance() >= 4.00) {
+            this.gourmetSold++;
+            card.pay(4.00);
+            return true;
+        } else {
+            return false;
         }
     }
 
