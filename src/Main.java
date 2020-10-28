@@ -3,33 +3,13 @@ import java.util.ArrayList; // import the ArrayList class
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Student> students = new ArrayList<Student>();
-        Scanner reader = new Scanner(System.in);
+        Clock clock = new Clock(23, 59, 50);
 
-        while (true){
-            System.out.print("name: ");
-            String name = reader.nextLine();
-            if(name.isEmpty()) {
-                break;
-            }
-            System.out.print("studentnumber: ");
-            String studentNumber = reader.nextLine();
-            students.add(new Student(name, studentNumber));
-        }
-
-        for (Student student: students
-        ) {
-            System.out.println(student);
-        }
-
-        System.out.print("Give search term: ");
-        String searchTerm = reader.nextLine();
-        System.out.println("Result:");
-        for (Student student: students
-        ) {
-            if(student.getName().contains(searchTerm)){
-                System.out.println(student);
-            }
+        int i = 0;
+        while( i < 20) {
+            System.out.println( clock );
+            clock.tick();
+            i++;
         }
 
 
