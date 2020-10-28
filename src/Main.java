@@ -2,20 +2,17 @@ import java.util.Scanner; //to read user input
 import java.util.ArrayList; // import the ArrayList class
 
 public class Main {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) {
+        LyyraCard cardOfPekka = new LyyraCard(10);
 
-        Counter test = new Counter(12, true);
-        Counter test2 = new Counter(22);
-        Counter test3 = new Counter(true);
-        Counter test4 = new Counter();
+        System.out.println("money on the card " + cardOfPekka.balance() );
+        boolean succeeded = cardOfPekka.pay(8);
+        System.out.println("money taken: " + succeeded );
+        System.out.println("money on the card " + cardOfPekka.balance() );
 
-
-        test.increase();
-
-        System.out.println(test);
-
+        succeeded = cardOfPekka.pay(4);
+        System.out.println("money taken: " + succeeded );
+        System.out.println("money on the card " + cardOfPekka.balance() );
     }
-
-
 }
 
