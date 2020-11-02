@@ -24,6 +24,12 @@ public class GuessingGame {
         }
     }
 
+    public int average(int firstNumber, int secondNumber){
+        double average = (double)(firstNumber + secondNumber) / 2;
+        average = Math.floor(average);
+        return (int)average;
+    }
+
     public void instructions(int lowerLimit, int upperLimit) {
         int maxQuestions = howManyTimesHalvable(upperLimit - lowerLimit);
 
