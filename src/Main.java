@@ -1,27 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-
-
-        int suurus = 10;
-
-        for(int rowIndex = 0; rowIndex < suurus; rowIndex++) {
-
-            for(int columnIndex = 0; columnIndex < suurus; columnIndex++) {
-
-                //Kui reaindeks on suurem kui veeruindeks
-                if(rowIndex > columnIndex) {
-                    System.out.print(suurus - 1 - rowIndex + " ");
-
-                    // Kui reaindeks on väiksem/võrdne kui veeruindeks
-                } else {
-                    System.out.print(suurus - 1 - columnIndex + " ");
-                }
-
-            }
-            //reavahetus, liigub järgmisele reale
-            System.out.println();
-        }
-
+        int[] array = {5, 1, 3, 4, 2};
+        printElegantly(array);
     }
 
+    public static void printElegantly(int[] array) {
+        // write code here
+        for(int number : array) {
+            System.out.print(number + ", ");
+        }
+    }
 }
