@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -9,9 +7,6 @@ public class Main {
 
         TextUserInterface ui = new TextUserInterface(reader, dict);
         ui.start();
-
-
-
 
     }
 
