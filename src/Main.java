@@ -1,11 +1,16 @@
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        GuessingGame game = new GuessingGame();
 
+      HashMap<String, String> names = new HashMap<String, String>();
+      names.put("matti", "mage");
+      names.put("mikael", "mixu");
+      names.put("arto", "arppa");
 
-        game.play(1,90);
+      String name = names.get("mikael");
+        System.out.println(name);
     }
 
 
