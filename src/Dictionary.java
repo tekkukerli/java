@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Dictionary {
@@ -21,5 +22,13 @@ public class Dictionary {
 
     public int amountOfWords(){
         return this.translation.size();
+    }
+
+    public ArrayList<String> translationList(){
+        ArrayList<String> keySet = new ArrayList<String>();
+        for ( String key : translation.keySet() ) {
+            keySet.add(key + " = " + translation.get(key));
+        }
+        return keySet;
     }
 }
