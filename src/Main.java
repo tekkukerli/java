@@ -1,16 +1,15 @@
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
+        Dictionary dictionary = new Dictionary();
+        dictionary.add("apina", "monkey");
+        dictionary.add("banaani", "banana");
+        dictionary.add("cembalo", "harpsichord");
 
-      HashMap<String, String> names = new HashMap<String, String>();
-      names.put("matti", "mage");
-      names.put("mikael", "mixu");
-      names.put("arto", "arppa");
+        System.out.println(dictionary.translate("apina"));
+        System.out.println(dictionary.translate("porkkana"));
 
-      String name = names.get("mikael");
-        System.out.println(name);
     }
 
 
