@@ -2,12 +2,12 @@ package burgeripakett;
 
 public class MenuItem {
 
-    int orderNr;
-    String foodItem;
-    String ingredients;
-    int price;
+    private int orderNr;
+    private String foodItem;
+    private String ingredients;
+    private int price;
 
-   public MenuItem(int orderNr, String foodItem, String ingredients, int price){
+   MenuItem(int orderNr, String foodItem, String ingredients, int price){
         this.orderNr = orderNr;
         this.foodItem = foodItem;
         this.ingredients = ingredients;

@@ -1,8 +1,8 @@
 package burgeripakett;
 
-public class ChickenToppings extends Toppings {     //Inheritance
+public class NewYorkToppings extends Toppings {
 
-    ChickenToppings(String topping1, String topping2, String topping3, String topping4, double topping1Price, double topping2Price, double topping3Price, double topping4Price){
+    NewYorkToppings(String topping1, String topping2, String topping3, String topping4, double topping1Price, double topping2Price, double topping3Price, double topping4Price){
         this.topping1 = topping1;
         this.topping2 = topping2;
         this.topping3 = topping3;
@@ -14,7 +14,7 @@ public class ChickenToppings extends Toppings {     //Inheritance
     }
 
     public String toString() {
-        System.out.println("Kanaburgeri lisandid: ");
+        System.out.println("New York burgeri lisandid: ");
         return  topping1 + " " + topping1Price + " €" + "\n" +
                 topping2 + " " + topping2Price + " €" + "\n" +
                 topping3 + " " + topping3Price + " €" + "\n" +

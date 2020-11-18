@@ -3,32 +3,30 @@ package burgeripakett;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Burger {
+class Burger {
 
     private String name;   //encapsulation - variables are kept private or “encapsulated.”
     private String meat;
     private String bread;
     private double price;
-    ArrayList<String> toppings = new ArrayList<String>();
-    private double toppingPrice = 0.50;
-    int toppingCounter = 0;
+    private ArrayList<String> toppings = new ArrayList<String>();
+    private int toppingCounter = 0;
 
-    public Burger(String name, String meat, String bread, double price) {
+    Burger(String name, String meat, String bread, double price) {
         this.name = name;
         this.meat = meat;
         this.bread = bread;
         this.price = price;
     }
 
-    public Burger(String name, String meat, double price) {   //polymorphism - several methods with the same name within a class
+    Burger(String name, String meat, double price) {   //polymorphism - several methods with the same name within a class
         this.name = name;
         this.meat = meat;
         this.price = price;
         this.bread = "teraleib";
     }
 
-
-    public void chooseToppings() {
+    void chooseToppings() {
         Scanner scanner = new Scanner(System.in);
 
         while(toppingCounter < 4) {
@@ -47,11 +45,8 @@ public class Burger {
         System.out.println();
     }
 
-    public double calculateBurger() {
+    double calculateBurger() {
+        double toppingPrice = 0.50;
         return this.price + (toppingCounter * toppingPrice);
     }
-
-
-
-
 }

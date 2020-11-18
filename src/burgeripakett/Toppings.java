@@ -12,5 +12,4 @@ abstract class Toppings {  //Abstraction
     double topping4Price = 0;
 
     public abstract String toString();
-
 }

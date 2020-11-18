@@ -1,12 +1,7 @@
 package burgeripakett;
 
-import burgeripakett.Burger;
-import burgeripakett.CheeseToppings;
-import burgeripakett.Toppings;
-
 import java.util.ArrayList;
 import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -24,12 +19,10 @@ public class Main {
         cheeseToppingsList.add(new CheeseToppings("peekon", "kurk", "sibul", "peekonikaste", 0.5,0.5,0.5,0.5));
 
         ArrayList<Toppings> NewYorkToppingsList = new ArrayList<Toppings>();
-        NewYorkToppingsList.add(new CheeseToppings("ananass", "tomat", "kurk", "sibul", 0.5,0.5,0.5,0.5));
-
+        NewYorkToppingsList.add(new NewYorkToppings("ananass", "tomat", "kurk", "sibul", 0.5,0.5,0.5,0.5));
 
         Scanner orderMore = new Scanner(System.in);
         double priceSum = 0;
-
 
         while(true) {
             Scanner burgerChoice = new Scanner(System.in);
@@ -68,7 +61,6 @@ public class Main {
                 if(moreBurgers.equals("ei")) {
                     break;
                 }
-
             }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //Kui valis juustuburgeri
@@ -125,9 +117,6 @@ public class Main {
 
             else break;
         }
-
-
         System.out.println("\nTeie arve on " + priceSum + " €");
     }
-
 }
